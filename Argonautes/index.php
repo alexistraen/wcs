@@ -35,7 +35,7 @@ require "Controllers/index-Controller.php";
 
       <div>
         <label for="name">Nom de l&apos;Argonaute</label>
-        <input id="name" name="name" type="text" value="<?= isset($_POST['name']) ? $_POST["name"] : "" ?>" placeholder="Charalampos">
+        <input id="name" name="name" type="text" value="<?= isset($securedName) ? $securedName : "" ?>" placeholder="Charalampos">
       </div>
 
       <div class="formErrorMessage">
@@ -44,14 +44,15 @@ require "Controllers/index-Controller.php";
 
       <button type="submit" name="addMember">Envoyer</button>
 
-      <div>
-        <?= isset($message) ? $message : "" ?>
+      <div class="formErrorMessage">
+        <?= isset($errorMessage) ? $errorMessage : "" ?>
       </div>
 
     </form>
 
     <!-- Member list -->
     <h2>Membres de l'équipage</h2>
+    <h3><?= isset($getAllMembers) ? count($getAllMembers) . "/50" : "" ?></h3>
     <div class="member-list">
 
       <?php
@@ -65,7 +66,7 @@ require "Controllers/index-Controller.php";
             <p><?= $value["membersName"] ?></p>
           </div>
 
-      <?php
+        <?php
 
         }
       } else {
@@ -73,7 +74,7 @@ require "Controllers/index-Controller.php";
 
         <p>Il n'y a aucun membre dans l'équipage !</p>
 
-        <?php
+      <?php
       }
 
       ?>
