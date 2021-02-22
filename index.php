@@ -52,7 +52,7 @@ require "Controllers/index-Controller.php";
 
     <!-- Member list -->
     <h2>Membres de l'équipage</h2>
-    <h3><?= isset($getAllMembers) ? count($getAllMembers) . "/50" : "" ?></h3>
+    <h3><?= $getAllMembers ? count($getAllMembers) . "/50" : "" ?></h3>
     <div class="member-list">
 
       <?php

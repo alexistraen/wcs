@@ -76,32 +76,4 @@ class Argonautes extends Database
             return false;
         }
     }
-
-    // public function getOnePatients($patientId)
-    // {
-    //     $query = "SELECT * FROM Patients WHERE id = :patientId";
-    //     $queryGetOnePatients = parent::getDb()->prepare($query);
-    //     $queryGetOnePatients->bindValue("patientId", $patientId, PDO::PARAM_INT);
-    //     $queryGetOnePatients->execute();
-    //     $resultsQuery = $queryGetOnePatients->fetch();
-    //     if (!empty($resultsQuery)) {
-    //         return $resultsQuery;
-    //     } else {
-    //         return false;
-    //     }
-    // }
-
-    // public function updatePatient($patientId, $lastname, $firstname, $birthdate, $phone, $mail)
-    // {
-    //     $query = "UPDATE patients SET lastname = :lastname, firstname = :firstname, birthdate = :birthdate, phone = :phone, mail = :mail WHERE id = :patientId";
-    //     $queryUpdatePatient = parent::getDb()->prepare($query);
-    //     $queryUpdatePatient->bindValue("patientId", $patientId, PDO::PARAM_STR);
-    //     $queryUpdatePatient->bindValue("lastname", $lastname, PDO::PARAM_STR);
-    //     $queryUpdatePatient->bindValue("firstname", $firstname, PDO::PARAM_STR);
-    //     $queryUpdatePatient->bindValue("birthdate", $birthdate, PDO::PARAM_STR);
-    //     $queryUpdatePatient->bindValue("phone", $phone, PDO::PARAM_STR);
-    //     $queryUpdatePatient->bindValue("mail", $mail, PDO::PARAM_STR);
-
-    //     return $queryUpdatePatient->execute();
-    // }
 }

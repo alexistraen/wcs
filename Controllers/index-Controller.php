@@ -10,12 +10,12 @@ $getAllMembers = $argonautes->getAllMembers();
 if (isset($_POST["addMember"])) {
     $arrayErrors = [];
 
-    function cleanData($var)
+    function cleanData($argoName)
     {
-        $var = trim($var);
-        $var = stripslashes($var);
-        $var = htmlspecialchars($var);
-        return $var;
+        $argoName = trim($argoName);
+        $argoName = stripslashes($argoName);
+        $argoName = htmlspecialchars($argoName);
+        return $argoName;
     }
 
     if (count($getAllMembers) >= 50) {
