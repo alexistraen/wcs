@@ -18,8 +18,10 @@ if (isset($_POST["addMember"])) {
         return $argoName;
     }
 
-    if (count($getAllMembers) >= 50) {
-        $arrayErrors["name"] = "L'équipage est déjà au complet !";
+    if (!empty($getAllMembers)) {
+        if (count($getAllMembers) >= 50) {
+            $arrayErrors["name"] = "L'équipage est déjà au complet !";
+        }
     }
 
     if (isset($_POST["name"])) {
